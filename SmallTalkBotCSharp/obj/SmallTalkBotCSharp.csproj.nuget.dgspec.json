@@ -1,0 +1,78 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\eldar\\OneDrive\\Рабочий стол\\Projects\\SmallTalkBotCSharp\\SmallTalkBotCSharp\\SmallTalkBotCSharp.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\eldar\\OneDrive\\Рабочий стол\\Projects\\SmallTalkBotCSharp\\SmallTalkBotCSharp\\SmallTalkBotCSharp.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\eldar\\OneDrive\\Рабочий стол\\Projects\\SmallTalkBotCSharp\\SmallTalkBotCSharp\\SmallTalkBotCSharp.csproj",
+        "projectName": "SmallTalkBotCSharp",
+        "projectPath": "C:\\Users\\eldar\\OneDrive\\Рабочий стол\\Projects\\SmallTalkBotCSharp\\SmallTalkBotCSharp\\SmallTalkBotCSharp.csproj",
+        "packagesPath": "C:\\Users\\eldar\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\eldar\\OneDrive\\Рабочий стол\\Projects\\SmallTalkBotCSharp\\SmallTalkBotCSharp\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\eldar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "Microsoft.AspNetCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.1, )",
+              "autoReferenced": true
+            },
+            "Microsoft.AspNetCore.Razor.Design": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.2, )"
+            },
+            "Microsoft.NETCore.App": {
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.2, )"
+            },
+            "VkNet": {
+              "target": "Package",
+              "version": "[1.40.0, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

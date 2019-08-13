@@ -1,0 +1,11 @@
+C:\Users\eldar\OneDrive\Рабочий стол\Projects\SmallTalkBotCSharp\SmallTalkBotCSharp\bin\Debug\netcoreapp2.1\SmallTalkBotCSharp.deps.json
+C:\Users\eldar\OneDrive\Рабочий стол\Projects\SmallTalkBotCSharp\SmallTalkBotCSharp\bin\Debug\netcoreapp2.1\SmallTalkBotCSharp.runtimeconfig.json
+C:\Users\eldar\OneDrive\Рабочий стол\Projects\SmallTalkBotCSharp\SmallTalkBotCSharp\bin\Debug\netcoreapp2.1\SmallTalkBotCSharp.runtimeconfig.dev.json
+C:\Users\eldar\OneDrive\Рабочий стол\Projects\SmallTalkBotCSharp\SmallTalkBotCSharp\bin\Debug\netcoreapp2.1\SmallTalkBotCSharp.dll
+C:\Users\eldar\OneDrive\Рабочий стол\Projects\SmallTalkBotCSharp\SmallTalkBotCSharp\obj\Debug\netcoreapp2.1\SmallTalkBotCSharp.csprojAssemblyReference.cache
+C:\Users\eldar\OneDrive\Рабочий стол\Projects\SmallTalkBotCSharp\SmallTalkBotCSharp\obj\Debug\netcoreapp2.1\SmallTalkBotCSharp.csproj.CoreCompileInputs.cache
+C:\Users\eldar\OneDrive\Рабочий стол\Projects\SmallTalkBotCSharp\SmallTalkBotCSharp\obj\Debug\netcoreapp2.1\SmallTalkBotCSharp.RazorAssemblyInfo.cache
+C:\Users\eldar\OneDrive\Рабочий стол\Projects\SmallTalkBotCSharp\SmallTalkBotCSharp\obj\Debug\netcoreapp2.1\SmallTalkBotCSharp.RazorAssemblyInfo.cs
+C:\Users\eldar\OneDrive\Рабочий стол\Projects\SmallTalkBotCSharp\SmallTalkBotCSharp\obj\Debug\netcoreapp2.1\SmallTalkBotCSharp.AssemblyInfoInputs.cache
+C:\Users\eldar\OneDrive\Рабочий стол\Projects\SmallTalkBotCSharp\SmallTalkBotCSharp\obj\Debug\netcoreapp2.1\SmallTalkBotCSharp.AssemblyInfo.cs
+C:\Users\eldar\OneDrive\Рабочий стол\Projects\SmallTalkBotCSharp\SmallTalkBotCSharp\obj\Debug\netcoreapp2.1\SmallTalkBotCSharp.RazorTargetAssemblyInfo.cache

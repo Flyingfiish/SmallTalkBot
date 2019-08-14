@@ -10,10 +10,18 @@
 
   <ItemGroup>
     <PackageReference Include="ApiAi" Version="1.0.4" />
+    <PackageReference Include="Google.Cloud.Dialogflow.V2" Version="1.0.0" />
+    <PackageReference Include="Google.Cloud.Storage.V1" Version="2.3.0" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
     <PackageReference Include="VkNet" Version="1.40.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="SmallTalkBot.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>

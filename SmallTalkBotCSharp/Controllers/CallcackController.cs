@@ -9,6 +9,9 @@ using System.Text;
 using ApiAi;
 using ApiAi.Models;
 using System.Linq;
+using Google.Apis.Auth.OAuth2;
+using Grpc.Auth;
+using Google.Cloud.Dialogflow.V2;
 
 namespace SmallTalkBotCSharp.Controllers
 {
@@ -77,6 +80,33 @@ namespace SmallTalkBotCSharp.Controllers
             return result.Messages.FirstOrDefault().Text;
         }
 
+        public static string DetectIntent(string text)
+        {
+            var query = new QueryInput
+            {
+                Text = new TextInput
+                {
+                    Text = text,
+                    LanguageCode = "ru"
+                }
+            };
+
+            var sessionId = Guid.NewGuid().ToString();
+            var agent = "smalltalkbot-atvxnh";
+            var json = Encoding.UTF8.GetString(Resource.SmallTalkBot);
+            var creds = GoogleCredential.FromJson("SmallTalkBot.json");
+            var channel = new Grpc.Core.Channel(SessionsClient.DefaultEndpoint.Host,
+                          creds.ToChannelCredentials());
+
+            var client = SessionsClient.Create(channel);
+
+            var dialogFlow = client.DetectIntent(
+                new SessionName(agent, sessionId),
+                query
+            );
+            channel.ShutdownAsync();
+            return dialogFlow.QueryResult.FulfillmentText;
+        }
 
     }
 }

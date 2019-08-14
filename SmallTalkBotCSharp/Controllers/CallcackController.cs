@@ -5,8 +5,10 @@ using VkNet.Abstractions;
 using VkNet.Model;
 using VkNet.Model.RequestParams;
 using VkNet.Utils;
-using Google.Cloud.Dialogflow.V2;
 using System.Text;
+using ApiAi;
+using ApiAi.Models;
+using System.Linq;
 
 namespace SmallTalkBotCSharp.Controllers
 {
@@ -14,6 +16,11 @@ namespace SmallTalkBotCSharp.Controllers
     [ApiController]
     public class CallbackController : ControllerBase
     {
+        private const string
+            ClientAccessToken = "e2c282551f7a4f90858c2aa523c7b6cd",
+            DeveloperAccessToken = "ce225703b1334a35817d8aa0de7e009c",
+            ExampleEntityId = "your_exists_entity_id";
+
         private readonly IVkApi _vkApi;
         /// <summary>
         /// Конфигурация приложения
@@ -40,7 +47,7 @@ namespace SmallTalkBotCSharp.Controllers
                     {
                         // Десериализация
                         var msg = Message.FromJson(new VkResponse(updates.Object));
-                        string answer = DetectIntentFromTexts("smalltalkbot - atvxnh", Guid.NewGuid().ToString(), msg.Text.Split(' '));
+                        string answer = GetAnswer(msg.Text);
                         // Отправим в ответ полученный от пользователя текст
                         _vkApi.Messages.Send(new MessagesSendParams
                         {
@@ -56,43 +63,20 @@ namespace SmallTalkBotCSharp.Controllers
             return Ok("ok");
         }
 
-        public static string DetectIntentFromTexts(string projectId,
-                                                string sessionId,
-                                                string[] texts,
-                                                string languageCode = "ru")
+        public static string GetAnswer(string text)
         {
-            var client = SessionsClient.Create();
+            var answer = new StringBuilder();
 
-            StringBuilder answer = new StringBuilder();
+            var result = QueryService.SendRequest(new ConfigModel { AccesTokenClient = ClientAccessToken }, text);
 
-            foreach (var text in texts)
-            {
-                var response = client.DetectIntent(
-                    session: new SessionName(projectId, sessionId),
-                    queryInput: new QueryInput()
-                    {
-                        Text = new TextInput()
-                        {
-                            Text = text,
-                            LanguageCode = languageCode
-                        }
-                    }
-                );
+            //foreach (var message in result.Messages)
+            //{
+            //    answer.Append(message.Text);
+            //}
 
-                var queryResult = response.QueryResult;
-
-                answer.Append(" " + queryResult.FulfillmentText);
-
-                //Console.WriteLine($"Query text: {queryResult.QueryText}");
-                //if (queryResult.Intent != null)
-                //{
-                //    Console.WriteLine($"Intent detected: {queryResult.Intent.DisplayName}");
-                //}
-                //Console.WriteLine($"Intent confidence: {queryResult.IntentDetectionConfidence}");
-                //Console.WriteLine($"Fulfillment text: {queryResult.FulfillmentText}");
-            }
-
-            return answer.ToString();
+            return result.Messages.FirstOrDefault().Text;
         }
+
+
     }
 }

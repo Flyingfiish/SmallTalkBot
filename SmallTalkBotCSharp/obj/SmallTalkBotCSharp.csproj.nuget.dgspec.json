@@ -41,9 +41,9 @@
       "frameworks": {
         "netcoreapp2.1": {
           "dependencies": {
-            "Google.Cloud.Dialogflow.V2": {
+            "ApiAi": {
               "target": "Package",
-              "version": "[1.0.0, )"
+              "version": "[1.0.4, )"
             },
             "Microsoft.AspNetCore.App": {
               "suppressParent": "All",

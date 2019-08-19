@@ -93,7 +93,7 @@ namespace SmallTalkBotCSharp.Controllers
 
             var sessionId = Guid.NewGuid().ToString();
             var agent = "smalltalkbot-atvxnh";
-            var json = Encoding.UTF8.GetString(Resource.SmallTalkBot);
+            var json = Encoding.UTF8.GetString(SmallTalkBotCSharp.Resource.SmallTalkBot);
             var creds = GoogleCredential.FromJson("SmallTalkBot.json");
             var channel = new Grpc.Core.Channel(SessionsClient.DefaultEndpoint.Host,
                           creds.ToChannelCredentials());
